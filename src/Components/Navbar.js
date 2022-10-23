@@ -31,7 +31,7 @@ const Navbar = () => {
     <div>
       {/* Nav bar */}
       <nav id="navbar">
-        <a href="/" className="logo">
+        <a href="/" className="logo" data-aos="fade-right">
           <img src={logo} alt="" />
         </a>
         <div className="bx bx-menu" id="menu-icon"></div>
@@ -41,17 +41,17 @@ const Navbar = () => {
             className="fas fa-bars "
           ></i>
         </label>
-        <ul>
+        <ul data-aos="fade-left">
           <li>
             <a className="active" href="/">
               Home
             </a>
           </li>
           <li>
-            <a href="/">Event</a>
+            <a href="/">Events</a>
           </li>
           <li>
-            <a href="/">Project</a>
+            <a href="/">Projects</a>
           </li>
           <li>
             <a href="/">Members</a>
