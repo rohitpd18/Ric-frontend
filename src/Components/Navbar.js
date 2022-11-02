@@ -23,15 +23,13 @@ const Navbar = () => {
     if (currentScrollpos === 0) {
       document.getElementById("navbar").classList.remove("bg-light", "shadow");
     }
-    console.log(prevScrollpos);
-    console.log(currentScrollpos);
     prevScrollpos = currentScrollpos;
   };
   return (
     <div>
       {/* Nav bar */}
       <nav id="navbar">
-        <a href="/" className="logo" data-aos="fade-right">
+        <a href="/" className="logo" data-aos="fade-down">
           <img src={logo} alt="" />
         </a>
         <div className="bx bx-menu" id="menu-icon"></div>
@@ -41,7 +39,7 @@ const Navbar = () => {
             className="fas fa-bars "
           ></i>
         </label>
-        <ul data-aos="fade-left">
+        <ul data-aos="fade-down">
           <li>
             <a className="active" href="/">
               Home
@@ -50,7 +48,7 @@ const Navbar = () => {
           <li>
             <a href="/">Events</a>
           </li>
-          <li>
+          <li> 
             <a href="/">Projects</a>
           </li>
           <li>
