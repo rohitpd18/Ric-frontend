@@ -18,10 +18,8 @@
     padding-bottom: 1.5rem;
   transform: translateY(-20px) !important;
 }
-#special-project {
+#general-project,#special-project, #core-members, #general-members{
   padding-top: 10vh;
-}
-#general-project,#special-project{
     font-weight: 900;
   }
 

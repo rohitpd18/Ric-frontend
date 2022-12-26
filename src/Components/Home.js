@@ -1,12 +1,14 @@
 import React from "react";
 import DefultImage from "../Assets/Image/defult-image.jpg";
 import bannerImage from "../Assets/Image/banner-image.png";
-import EventCard from "./EventCard";
-import "../Assets/Css/Home.css";
+import Events from "./Events";
+import "../Assets/Css/Home.css"; 
 
 export default function Home() {
+
   return (
     <div>
+       
       {/* header profile */}
       <header>
         {/* home banner */}
@@ -25,40 +27,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Upcoming event */}
-      <section className="upcoming-event">
-        <div className="text-center font-800 my-2" data-aos="zoom-in">
-          <h1 className="fw-bold fs-1">Upcoming Event</h1>
-          {/* <div className="progress-bar bg-primary h-4" style={{height: "1rem", width: '25%'}} role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div> */}
-        </div>
-        <div className="container text-center mt-3 ">
-          <div className="d-flex flex-row flex-wrap justify-content-center">
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-          </div>
-        </div>
-      </section>
-
-      {/* past event */}
-      <section className="past-event">
-        <div className="text-center font-800 mt-5" data-aos="zoom-in">
-          <h1 className="fw-bold fs-1">Past Event</h1>
-        </div>
-        <div className="container text-center mt-3 ">
-          <div className="d-flex flex-row flex-wrap justify-content-center">
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-            <EventCard />
-          </div>
-        </div>
-      </section>
+     <Events/>
 
       {/* Why to join RIC */}
       <section className="why-to-join-ric">

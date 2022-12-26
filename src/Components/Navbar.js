@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../Assets/Image/logo.png";
 import AOS from "aos";
-import '../Assets/Css/Navbar.css'
+import "../Assets/Css/Navbar.css";
 
 const Navbar = () => {
+  let location = useLocation();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -29,33 +32,56 @@ const Navbar = () => {
     <div>
       {/* Nav bar */}
       <nav id="navbar">
-        <a href="/" className="logo" data-aos="fade-down">
+        <Link to="/" className="logo" data-aos="fade-down">
           <img src={logo} alt="" />
-        </a>
+        </Link>
         <div className="bx bx-menu" id="menu-icon"></div>
         <input type="checkbox" id="click" />
         <label htmlFor="click" className="menu-btn">
-          <i style={{color: "black"}}
-            className="fas fa-bars "
-          ></i>
+          <i style={{ color: "black" }} className="fas fa-bars "></i>
         </label>
         <ul data-aos="fade-down">
           <li>
-            <a className="active" href="/">
+            <Link
+              className={`${location.pathname === "/" ? "active" : ""}`}
+              to="/"
+            >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">Events</a>
-          </li>
-          <li> 
-            <a href="/">Projects</a>
+            <Link
+              className={`${location.pathname === "/events" ? "active" : ""}`}
+              to="/events"
+            >
+              Events
+            </Link>
           </li>
           <li>
-            <a href="/">Members</a>
+            <Link
+              className={`${location.pathname === "/projects" ? "active" : ""}`}
+              to="/projects"
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="/">Admin Login</a>
+            <Link
+              className={`${location.pathname === "/members" ? "active" : ""}`}
+              to="/members"
+            >
+              Members
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={`${
+                location.pathname === "/aboutUs" ? "active" : ""
+              }`}
+              to="/aboutUs"
+            >
+              About Us
+            </Link>
           </li>
         </ul>
       </nav>
